@@ -1,16 +1,19 @@
 import { useAddress, useContract, useTokenBalance } from "@thirdweb-dev/react";
 
-const Web3Token = () => {
+const RewardWeb3 = () => {
   const account = useAddress();
-  const { contract } = useContract(import.meta.env.VITE_WEB3_CONTRACT_ADDRESS);
-  const { data: web3TokenBalance, isLoadingTokenBalance } = useTokenBalance(
+  const { contract } = useContract(
+    import.meta.env.VITE_REWARD_CONTRACT_ADDRESS
+  );
+  const { data: rewardtokenBalance, isLoadingTokenBalance } = useTokenBalance(
     contract,
     account
   );
+
   return (
-    <div className=" p-6 rounded-lg shadow-md">
+    <div className="p-6 rounded-lg shadow-md">
       <h2 className="text-3xl text-[#f43550] font-bold mb-4">
-        {web3TokenBalance?.name}
+        {rewardtokenBalance?.name}
       </h2>
 
       {isLoadingTokenBalance ? (
@@ -18,10 +21,10 @@ const Web3Token = () => {
       ) : (
         <div>
           <p className="text-[#e7b7b6] mb-2">
-            User Balance: {web3TokenBalance?.displayValue}
+            User Balance: {rewardtokenBalance?.displayValue}
           </p>
           <p className="text-[#e7b7b6]">
-            Token Symbol: {web3TokenBalance?.symbol}
+            Token Symbol: {rewardtokenBalance?.symbol}
           </p>
         </div>
       )}
@@ -29,4 +32,4 @@ const Web3Token = () => {
   );
 };
 
-export default Web3Token;
+export default RewardWeb3;
