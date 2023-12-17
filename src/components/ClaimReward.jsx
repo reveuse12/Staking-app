@@ -1,25 +1,29 @@
-import React from "react";
-import { Web3Button } from "@web3modal/react";
+import { useState } from "react";
+import { Web3Button } from "@thirdweb-dev/react";
+
 const ClaimReward = () => {
-  const [rewardAmount, setRewardAmount] = React.useState("");
+  const [claimRewards, setClaimRewards] = useState(0);
 
   return (
-    <div>
-      <h2>Claim Your Rewards</h2>
-      <div>
-        <label htmlFor="rewards">Reward Balance</label>
+    <div className="mx-auto w-full text-center bg-gradient-to-br from-[#262a33] to-[#19202a] mt-8 rounded-lg p-6">
+      <h2 className="text-3xl font-bold mb-4 text-[#f43550] ">
+        Claim Your Web3 Rewards Tokens
+      </h2>
+      <div className="flex bg-[#5d97a8] p-4  rounded-lg shadow-md mb-4 items-center justify-center">
         <input
-          type="text"
-          id="rewards"
+          type="Number"
           placeholder="Enter Amount"
-          onChange={(e) => setRewardAmount(e.target.value)}
-          value={rewardAmount}
+          value={claimRewards}
+          onChange={(e) => setClaimRewards(e.target.value)}
+          className="p-3 mr-2 border text-white border-gray-300 rounded focus:outline-none focus:border-white bg-gray-700 "
         />
         <Web3Button
           contractAddress={import.meta.env.VITE_STAKING_CONTRACT_ADDRESS}
-          action={async (contract) => {
-            contract.call("claimReward", [rewardAmount]);
+          action={(contract) => {
+            contract.call("claimRewards");
+            setClaimRewards(0);
           }}
+          className="bg-pink-700 text-white p-2 rounded cursor-pointer hover:bg-pink-700 hover:text-white"
         >
           Claim
         </Web3Button>
