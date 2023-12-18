@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-const Stake = () => {
+const Stakes = () => {
   const [stakeAmount, setStakeAmount] = useState(0);
   const [withdrawAmount, setWithdrawAmount] = useState(0);
 
@@ -74,4 +74,4 @@ const Stake = () => {
   );
 };
 
-export default Stake;
+export default Stakes;
