@@ -4,7 +4,6 @@ import App from "./App.jsx";
 import "./index.css";
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { Toaster } from "react-hot-toast";
-import.meta.env.VITE_THIRDWEB_CLIENT_ID;
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ThirdwebProvider

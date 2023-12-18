@@ -1,6 +1,6 @@
 import { useAddress, useContract, useTokenBalance } from "@thirdweb-dev/react";
 
-const Web3Token = () => {
+const Web3Tokens = () => {
   const account = useAddress();
   const { contract } = useContract(import.meta.env.VITE_WEB3_CONTRACT_ADDRESS);
   const { data: web3TokenBalance, isLoadingTokenBalance } = useTokenBalance(
@@ -31,4 +31,4 @@ const Web3Token = () => {
   );
 };
 
-export default Web3Token;
+export default Web3Tokens;
