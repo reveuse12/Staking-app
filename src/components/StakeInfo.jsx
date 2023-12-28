@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 const StakeInfo = () => {
   const staker = useAddress();
   const { contract } = useContract(
-    "0x94D1857B5B7d5C7a1e50216c7C7CfE6a4D05C102"
+    import.meta.env.VITE_STAKING_CONTRACT_ADDRESS
   );
   const { data: stakeInfo, isLoading } = useContractRead(
     contract,

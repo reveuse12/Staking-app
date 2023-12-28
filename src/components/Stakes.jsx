@@ -32,6 +32,27 @@ const Stakes = () => {
     }
   };
 
+  const handleClaim = async (contract) => {
+    try {
+      await toast.promise(contract.call("claimRewards"));
+      toast.success("Claim successful");
+    } catch (error) {
+      handleClaimError(error);
+    }
+  };
+
+  const handleClaimError = (error) => {
+    console.error("Error claiming rewards:", error);
+
+    let errorMessage =
+      "An error occurred while claiming rewards. Please try again.";
+
+    if (error.message) {
+      errorMessage = error.message;
+    }
+
+    toast.error(errorMessage);
+  };
   return (
     <div className="text-center w-full mt-8 p-6 bg-gradient-to-br from-[#262a33] to-[#19202a] text-white rounded-lg shadow-md">
       <h2 className="text-3xl font-bold text-[#f43550] mb-4">
@@ -70,6 +91,19 @@ const Stakes = () => {
           </Web3Button>
         </div>
       ))}
+
+      <h2 className="text-3xl font-bold mb-4 text-[#f43550] ">
+        Claim Your Web3 Rewards Tokens
+      </h2>
+      <div className="flex bg-[#5d97a8] p-4 rounded-lg shadow-md mb-4 items-center justify-center">
+        <Web3Button
+          contractAddress={import.meta.env.VITE_STAKING_CONTRACT_ADDRESS}
+          action={handleClaim}
+          className="bg-pink-700 text-white p-2 rounded cursor-pointer hover:bg-pink-700 hover:text-white"
+        >
+          Claim All
+        </Web3Button>
+      </div>
     </div>
   );
 };
