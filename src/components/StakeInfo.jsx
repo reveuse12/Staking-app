@@ -17,9 +17,9 @@ const StakeInfo = () => {
   const rewardAmount = stakeInfo && ethers.utils.formatUnits(stakeInfo[1]);
 
   return (
-    <div className="text-center bg-gradient-to-br from-[#262a33] to-[#19202a] mt-8 rounded-lg p-6">
-      <h1 className="text-4xl font-bold mb-4 text-[#f43550]">StakeInfo</h1>
-      <div className="text-[#e7b7b6]">
+    <div className="text-center bg-slate-400 rounded-lg p-6">
+      <h1 className="text-4xl font-bold mb-4 text-black">StakeInfo</h1>
+      <div className="text-black">
         <h3 className="text-lg mb-2">
           Staked: {isLoading ? "Loading..." : `${stakedAmount} Tokens`}
         </h3>

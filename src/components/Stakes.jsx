@@ -53,56 +53,57 @@ const Stakes = () => {
 
     toast.error(errorMessage);
   };
+
   return (
-    <div className="text-center w-full mt-8 p-6 bg-gradient-to-br from-[#262a33] to-[#19202a] text-white rounded-lg shadow-md">
-      <h2 className="text-3xl font-bold text-[#f43550] mb-4">
-        Stake your Web3 Token
-      </h2>
-
-      {["Stake", "Withdraw"].map((actionType, index) => (
-        <div key={index} className="bg-[#5d97a8] p-4 rounded-md mb-4">
-          <input
-            type="Number"
-            placeholder={`Enter ${actionType} Amount`}
-            value={actionType === "Stake" ? stakeAmount : withdrawAmount}
-            onChange={(e) =>
-              actionType === "Stake"
-                ? setStakeAmount(e.target.value)
-                : setWithdrawAmount(e.target.value)
-            }
-            className="p-3 mr-2 bg-gray-700 text-white rounded-md"
-          />
-          <Web3Button
-            contractAddress={import.meta.env.VITE_STAKING_CONTRACT_ADDRESS}
-            action={(contract) =>
-              handleStake(
-                contract,
-                actionType === "Stake" ? stakeAmount : withdrawAmount,
-                actionType.toLowerCase()
-              )
-            }
-            className={`mt-2 ${
-              actionType === "Stake"
-                ? "bg-green-500 hover:bg-green-600"
-                : "bg-red-500 hover:bg-red-600"
-            } text-white py-2 px-4 rounded-md cursor-pointer`}
-          >
-            {actionType}
-          </Web3Button>
+    <div className="p-6 bg-slate-400 text-black rounded-lg shadow-md">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h2 className="text-4xl font-bold mb-6">Stake your Web3 Token</h2>
+          {["Stake", "Withdraw"].map((actionType, index) => (
+            <div key={index} className="mb-6">
+              <input
+                type="Number"
+                placeholder={`Enter ${actionType} Amount`}
+                value={actionType === "Stake" ? stakeAmount : withdrawAmount}
+                onChange={(e) =>
+                  actionType === "Stake"
+                    ? setStakeAmount(e.target.value)
+                    : setWithdrawAmount(e.target.value)
+                }
+                className="p-4 bg-gray-800 text-white rounded-md w-full focus:outline-none"
+              />
+              <Web3Button
+                contractAddress={import.meta.env.VITE_STAKING_CONTRACT_ADDRESS}
+                action={(contract) =>
+                  handleStake(
+                    contract,
+                    actionType === "Stake" ? stakeAmount : withdrawAmount,
+                    actionType.toLowerCase()
+                  )
+                }
+                className={`mt-4 ${
+                  actionType === "Stake"
+                    ? "bg-blue-500 hover:bg-blue-600"
+                    : "bg-orange-500 hover:bg-orange-600"
+                } text-white py-3 px-6 rounded-md cursor-pointer transition duration-300`}
+              >
+                {actionType}
+              </Web3Button>
+            </div>
+          ))}
+          <h2 className="text-4xl font-bold mb-6">
+            Claim Your Web3 Rewards Tokens
+          </h2>
+          <div className="mb-6">
+            <Web3Button
+              contractAddress={import.meta.env.VITE_STAKING_CONTRACT_ADDRESS}
+              action={handleClaim}
+              className="bg-purple-700 text-white p-3 rounded cursor-pointer hover:bg-purple-800 hover:text-white transition duration-300"
+            >
+              Claim All
+            </Web3Button>
+          </div>
         </div>
-      ))}
-
-      <h2 className="text-3xl font-bold mb-4 text-[#f43550] ">
-        Claim Your Web3 Rewards Tokens
-      </h2>
-      <div className="flex bg-[#5d97a8] p-4 rounded-lg shadow-md mb-4 items-center justify-center">
-        <Web3Button
-          contractAddress={import.meta.env.VITE_STAKING_CONTRACT_ADDRESS}
-          action={handleClaim}
-          className="bg-pink-700 text-white p-2 rounded cursor-pointer hover:bg-pink-700 hover:text-white"
-        >
-          Claim All
-        </Web3Button>
       </div>
     </div>
   );

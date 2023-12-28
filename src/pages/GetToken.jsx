@@ -24,7 +24,7 @@ const GetToken = () => {
   };
 
   return (
-    <div className="bg-[#14162c] min-h-screen p-8">
+    <div id="container" className=" min-h-screen p-8">
       <h1 className="text-4xl text-red-500 text-center font-bold p-4">
         Testing Token For Staking App
       </h1>

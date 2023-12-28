@@ -1,11 +1,6 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-
 const Home = () => {
   return (
     <div id="container" className="">
-      <Navbar />
-
       {/* hero-section */}
       <header>
         {/* <!-- Hero Container --> */}
@@ -135,8 +130,6 @@ const Home = () => {
           className="absolute bottom-auto left-0 right-auto top-0 inline-block sm:bottom-auto sm:left-4 sm:right-auto sm:top-8 md:left-20 md:top-16"
         />
       </section>
-
-      <Footer />
     </div>
   );
 };

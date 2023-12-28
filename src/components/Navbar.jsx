@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <div className=" flex items-center text-2xl">
           <h1 className="text-4xl font-semibold capitalize text-pink-500">
-            <span className="underline decoration-slate-400">Crypto</span> App
+            <span className="underline decoration-sky-500">Crypto</span> App
           </h1>
         </div>
         <div className="hidden md:flex space-x-4">
