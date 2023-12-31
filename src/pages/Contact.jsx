@@ -4,13 +4,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div id="container" className="min-h-screen bg-gray-100">
-      <div className="text-center py-10">
-        <h1 className="text-4xl font-bold text-[#333]">
-          Contact for Work Query
-        </h1>
-      </div>
-
-      <section className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+      <section className="mx-auto w-full max-w-7xl  px-5 py-8 md:px-10 md:py-12 lg:py-18">
         <div className="grid items-center gap-8 sm:gap-20 lg:grid-cols-2">
           <div className="max-w-3xl">
             <h2 className="mb-2 text-3xl font-bold md:text-5xl text-[#333]">
