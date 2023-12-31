@@ -24,11 +24,14 @@ const GetToken = () => {
   };
 
   return (
-    <div id="container" className=" min-h-screen  p-8">
-      <h1 className="text-4xl text-gray-600 underline decoration-pink-500 text-center font-bold p-4">
+    <div
+      id="container"
+      className="min-h-screen p-8 flex flex-col items-center justify-center"
+    >
+      <h1 className="text-4xl text-gray-600 font-bold p-4 text-center">
         Testing Token For Staking App
       </h1>
-      <div className="flex flex-col md:flex-col justify-evenly items-center p-8 ">
+      <div className="flex flex-col md:flex-row justify-evenly items-center p-8 gap-8">
         <div className="text-center">
           <h1 className="text-4xl text-gray-600 font-semibold">
             Get your Web3 Token for Staking
@@ -45,7 +48,7 @@ const GetToken = () => {
           />
           <Web3Button
             contractAddress={import.meta.env.VITE_WEB3_CONTRACT_ADDRESS}
-            className="bg-[#f43550] text-white px-4 py-2 rounded-lg mt-4 cursor-pointer hover:bg-[#f54165]"
+            className="bg-[#f43550] text-white px-4 py-2 rounded-lg mt-4 cursor-pointer hover:bg-[#f54165] transition-all duration-300"
             action={(contract) =>
               handleTokenTransfer(contract, tokenAmount, "Web3")
             }
@@ -69,7 +72,7 @@ const GetToken = () => {
           />
           <Web3Button
             contractAddress={import.meta.env.VITE_REWARD_CONTRACT_ADDRESS}
-            className="bg-[#f43550] text-white px-4 py-2 rounded-lg mt-4 cursor-pointer hover:bg-[#f54165]"
+            className="bg-[#f43550] text-white px-4 py-2 rounded-lg mt-4 cursor-pointer hover:bg-[#f54165] transition-all duration-300"
             action={(contract) =>
               handleTokenTransfer(contract, rewardToken, "Reward")
             }

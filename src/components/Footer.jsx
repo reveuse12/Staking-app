@@ -10,7 +10,7 @@ const Footer = () => {
           className="m-8 md:text-5xl text-xl inline-block group text-slate-700 font-bold transition-all duration-300 ease-in-out max-w-full"
         >
           <p className="bg-left-bottom  bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-            Crypto App
+            BLOCK <span className="text-sky-600">Earn</span>
           </p>
         </Link>
         <div className="text-center font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1">
@@ -23,7 +23,7 @@ const Footer = () => {
             </p>
           </Link>
           <Link
-            to="/about"
+            to="#"
             className="inline-block px-6 py-2 font-normal group text-slate-600 transition-all duration-300 ease-in-out"
           >
             <p className="bg-left-bottom  bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
