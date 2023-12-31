@@ -19,14 +19,14 @@ const StakingApp = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-4 text-slate-600 underline decoration-pink-500">
+          <h2 className="text-4xl font-bold mb-4 text-slate-600 underline decoration-pink-500">
             Tokens
           </h2>
           <Web3Tokens />
         </div>
 
         <div className="mb-8">
-          <h2 className="text-3xl font-bold mb-4 text-slate-600 underline decoration-pink-500">
+          <h2 className="text-4xl font-bold mb-4 text-slate-600 underline decoration-pink-500">
             Staking Information
           </h2>
           <StakeInfo />
@@ -34,7 +34,7 @@ const StakingApp = () => {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-3xl font-bold mb-4 text-slate-600 underline decoration-pink-500">
+        <h2 className="text-4xl font-bold mb-4 text-slate-600 underline decoration-pink-500">
           Stake
         </h2>
         <Stakes />

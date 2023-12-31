@@ -24,16 +24,16 @@ const GetToken = () => {
   };
 
   return (
-    <div id="container" className=" min-h-screen p-8">
-      <h1 className="text-4xl text-red-500 text-center font-bold p-4">
+    <div id="container" className=" min-h-screen  p-8">
+      <h1 className="text-4xl text-gray-600 underline decoration-pink-500 text-center font-bold p-4">
         Testing Token For Staking App
       </h1>
-      <div className="flex flex-col md:flex-row justify-center items-center p-8 space-y-8 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col md:flex-col justify-evenly items-center p-8 ">
         <div className="text-center">
-          <h1 className="text-4xl text-red-500 font-semibold">
+          <h1 className="text-4xl text-gray-600 font-semibold">
             Get your Web3 Token for Staking
           </h1>
-          <label htmlFor="gettoken" className="text-white block mt-4">
+          <label htmlFor="gettoken" className="text-gray-400 block mt-4">
             Enter a Token amount
           </label>
           <input
@@ -41,7 +41,7 @@ const GetToken = () => {
             placeholder="Amount"
             value={tokenAmount}
             onChange={(e) => setTokenAmount(e.target.value)}
-            className="border text-black border-white rounded px-3 py-3 mt-2 mr-3 focus:outline-none focus:border-[#f43550] bg-white"
+            className="border text-black border-gray-900 rounded px-3 py-3 mt-2 mr-3 focus:outline-none focus:border-[#f43550] bg-gray-200"
           />
           <Web3Button
             contractAddress={import.meta.env.VITE_WEB3_CONTRACT_ADDRESS}
@@ -54,10 +54,10 @@ const GetToken = () => {
           </Web3Button>
         </div>
         <div className="text-center">
-          <h1 className="text-4xl text-red-500 font-semibold">
+          <h1 className="text-4xl text-gray-600 font-semibold">
             Get your Reward Web3 Token for Staking
           </h1>
-          <label htmlFor="getTokenReward" className="text-white block mt-4">
+          <label htmlFor="getTokenReward" className="text-gray-400 block mt-4">
             Get your Reward Tokens
           </label>
           <input
@@ -65,7 +65,7 @@ const GetToken = () => {
             placeholder="Amount"
             value={rewardToken}
             onChange={(e) => setRewardToken(e.target.value)}
-            className="border text-black border-white rounded px-3 py-3 mt-2 mr-3 focus:outline-none focus:border-[#f43550] bg-white"
+            className="border text-black border-gray-900 rounded px-3 py-3 mt-2 mr-3 focus:outline-none focus:border-[#f43550] bg-slate-200"
           />
           <Web3Button
             contractAddress={import.meta.env.VITE_REWARD_CONTRACT_ADDRESS}

@@ -4,14 +4,14 @@ const Home = () => {
       {/* hero-section */}
       <header>
         {/* <!-- Hero Container --> */}
-        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+        <div className="mx-auto w-full max-w-7xl  px-5 py-8 md:px-10 md:py-12 lg:py-18">
           {/* <!-- Component --> */}
           <div className="grid grid-cols-1 items-center justify-items-start gap-8 sm:gap-20 lg:grid-cols-2">
             {/* <!-- Hero Content --> */}
             <div className="flex max-w-2xl flex-col items-start">
               {/* <!-- Hero Title --> */}
-              <h1 className="mb-4 text-4xl font-bold md:text-6xl">
-                The Website You Want Without The Dev Time.
+              <h1 className="mb-4 text-4xl text-slate-600 capitalize font-bold md:text-6xl">
+                The Website You need During your money making time.
               </h1>
               <p className="mb-6 max-w-lg text-base text-[#636262] md:mb-10 lg:mb-12">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit ut
@@ -26,7 +26,7 @@ const Home = () => {
                 >
                   <input
                     type="email"
-                    className="mb-5 mr-6 h-9 w-full bg-[#f2f2f7] px-6 py-7 text-sm text-[#333333] focus:border-[#3898ec]"
+                    className="mb-5 mr-6 h-9 w-full bg-slate-200 rounded-lg px-6 py-7 text-sm text-[#333333] focus:border-[#3898ec]"
                     maxLength="256"
                     name="email"
                     placeholder="Enter your email"
@@ -62,7 +62,7 @@ const Home = () => {
               </div>
             </div>
             {/* <!-- Hero Image --> */}
-            <img src="" />
+            <img src="./Hero1.jpeg" className=" rounded-lg" />
           </div>
         </div>
       </header>
@@ -71,11 +71,13 @@ const Home = () => {
 
       <section className="relative">
         {/* <!-- Container --> */}
-        <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 py-8 md:px-10 md:py-12 lg:py-18">
           {/* <!-- Heading Div --> */}
           <div className="mx-auto w-full max-w-3xl text-center">
-            <p className="uppercase text-[#1353fe]">3 easy steps</p>
-            <h2 className="text-3xl mt-6 font-semibold md:text-5xl">
+            <p className="uppercase text-[#1353fe]">
+              3 easy steps to earn money in Crypto
+            </p>
+            <h2 className="text-3xl text-slate-600 mt-6 font-semibold md:text-5xl">
               How it{" "}
               <span className="bg-[#1353fe] rounded-lg px-2 text-pink-500">
                 works
@@ -93,7 +95,7 @@ const Home = () => {
               <div className="absolute -top-8 left-10 flex flex-col items-center justify-center rounded-xl border border-solid border-[#5481fb] bg-white px-8 py-5 [box-shadow:rgb(0,_0,_0)_4px_4px]">
                 <p className="text-xl font-bold md:text-2xl">1</p>
               </div>
-              <p className="text-xl font-semibold">Find Component</p>
+              <p className="text-xl font-semibold">Get Your Web3 Tokens</p>
               <p className="text-sm text-[#636262]">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit ut
                 aliquam, purus sit.
@@ -104,7 +106,7 @@ const Home = () => {
               <div className="absolute -top-8 left-10 flex flex-col items-center justify-center rounded-xl border border-solid border-[#5481fb] bg-white px-8 py-5 [box-shadow:rgb(0,_0,_0)_4px_4px]">
                 <p className="text-xl font-bold md:text-2xl">2</p>
               </div>
-              <p className="text-xl font-semibold">Copy and Paste</p>
+              <p className="text-xl font-semibold">Stake and Earn</p>
               <p className="text-sm text-[#636262]">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit ut
                 aliquam, purus sit.
@@ -115,7 +117,9 @@ const Home = () => {
               <div className="absolute -top-8 left-10 flex flex-col items-center justify-center rounded-xl border border-solid border-[#5481fb] bg-white px-8 py-5 [box-shadow:rgb(0,_0,_0)_4px_4px]">
                 <p className="text-xl font-bold md:text-2xl">3</p>
               </div>
-              <p className="text-xl font-semibold">Done</p>
+              <p className="text-xl font-semibold">
+                Get your reward in Reward Web3 Token
+              </p>
               <p className="text-sm text-[#636262]">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit ut
                 aliquam, purus sit.
@@ -123,12 +127,47 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <!-- BG Image --> */}
-        <img
-          src="https://assets.website-files.com/63904f663019b0d8edf8d57c/639832e3e7aba393eeeba215_plain6.svg"
-          alt=""
-          className="absolute bottom-auto left-0 right-auto top-0 inline-block sm:bottom-auto sm:left-4 sm:right-auto sm:top-8 md:left-20 md:top-16"
-        />
+      </section>
+
+      {/* About section */}
+
+      <section>
+        {/* <!-- Container --> */}
+        <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
+          {/* <!-- Title --> */}
+          <h2 className="mb-8 text-3xl font-bold md:text-5xl lg:mb-14">
+            Meet Flowspark
+          </h2>
+          <p className="mb-8 max-w-lg text-sm text-[#808080] sm:text-base lg:mb-24">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat.
+          </p>
+          <div className="grid gap-10 lg:grid-cols-2 lg:gap-12">
+            <img
+              src="https://assets.website-files.com/6458c625291a94a195e6cf3a/64b7a30c42421ae3cbe5abb9_about%20image.svg"
+              alt=""
+              className="inline-block h-full w-full rounded-2xl object-cover"
+            />
+            <div className="flex flex-col gap-5 rounded-2xl border border-solid border-black p-10 sm:p-20">
+              <h2 className="text-3xl font-bold md:text-5xl">Our Mission</h2>
+              <p className="text-sm text-[#808080] sm:text-base">
+                {" "}
+                Aliquet risus feugiat in ante metus. Arcu dui vivamus arcu felis
+                bibendum ut. Vestibulum lorem sed risus ultricies tristique
+                nulla. Vitae et leo duis ut diam quam. Bibendum arcu vitae
+                elementum curabitur vitae nunc. Dictumst vestibulum rhoncus est
+                pellentesque. Lectus proin nibh nisl condimentum id. Ullamcorper
+                dignissim cras tincidunt lobortis feugiat vivamus.
+                <br />
+                <br />
+                Massa id neque aliquam vestibulum morbi blandit. Nulla
+                pellentesque dignissim enim sit amet venenatis.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

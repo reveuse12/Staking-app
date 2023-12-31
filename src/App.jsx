@@ -10,8 +10,8 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/StakingApp" element={<StakingApp />} />
-          <Route path="/GetToken" element={<GetToken />} />
+          <Route path="/stakingapp" exact element={<StakingApp />} />
+          <Route path="/gettoken" exact element={<GetToken />} />
         </Route>
       </Routes>
     </>

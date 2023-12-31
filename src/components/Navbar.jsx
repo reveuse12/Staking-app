@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-4">
           <Link
             to="/"
-            className="group text-black  transition-all duration-300 ease-in-out"
+            className="group text-slate-600  transition-all duration-300 ease-in-out"
           >
             <p className="bg-left-bottom font-medium bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
               Home
@@ -26,15 +26,15 @@ const Navbar = () => {
           </Link>
           <Link
             to="About"
-            className="group  text-black font-medium transition-all duration-300 ease-in-out"
+            className="group  text-slate-600 font-medium transition-all duration-300 ease-in-out"
           >
             <p className="bg-left-bottom  bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
               About
             </p>
           </Link>
           <Link
-            to="StakingApp"
-            className="group  text-black font-medium transition-all duration-300 ease-in-out"
+            to="/StakingApp"
+            className="group  text-slate-600 font-medium transition-all duration-300 ease-in-out"
           >
             <p className="bg-left-bottom  bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
               Staking App
@@ -42,7 +42,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/GetToken"
-            className="group  text-black font-medium transition-all duration-300 ease-in-out"
+            className="group  text-slate-600 font-medium transition-all duration-300 ease-in-out"
           >
             <p className="bg-left-bottom  bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
               Get Tokens
@@ -50,7 +50,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="Contact"
-            className="group  text-black font-medium transition-all duration-300 ease-in-out"
+            className="group  text-slate-600 font-medium transition-all duration-300 ease-in-out"
           >
             <p className="bg-left-bottom  bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
               Contact
@@ -58,7 +58,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="md:hidden">
-          <button onClick={toggleNavbar} className="text-white">
+          <button onClick={toggleNavbar} className="text-slate-600">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -81,31 +81,31 @@ const Navbar = () => {
           <div className="flex flex-col space-y-4">
             <Link
               to="/"
-              className="text-black hover:text-blue-500 transition duration-300"
+              className="text-slate-600 hover:text-blue-500 transition duration-300"
             >
               Home
             </Link>
             <Link
               to="About"
-              className="text-black hover:text-blue-300 transition duration-300"
+              className="text-slate-600 hover:text-blue-300 transition duration-300"
             >
               About
             </Link>
             <Link
-              to="stakingapp"
-              className="text-black hover:text-blue-300 transition duration-300"
+              to="/stakingapp"
+              className="text-slate-600 hover:text-blue-300 transition duration-300"
             >
               Staking App
             </Link>
             <Link
-              to="gettoken"
-              className="text-black hover:text-blue-300 transition duration-300"
+              to="/gettoken"
+              className="text-slate-600 hover:text-blue-300 transition duration-300"
             >
               Get Tokens
             </Link>
             <Link
               to="Contact"
-              className="text-black   hover:text-blue-300 transition duration-300"
+              className="text-slate-600   hover:text-blue-300 transition duration-300"
             >
               Contact
             </Link>
